@@ -1,4 +1,25 @@
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Ingredient</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="formLabels">
+              <%= simple_form_for [ @cocktail, @dose ] do |form| %>
+                 <%= form.input :description%>
+                 <%= form.association :ingredient%>
+              <%= form.submit class: "btn btn-link btnBlueText"  %>
+              <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container-fluid mainContainer">
   <div class="row">
@@ -19,21 +40,30 @@
   <div class="row">
 
     <ul class="list-group col-4">
-       <h1 class="ingListHeader"><em>Ingredients</em></h1>
+       <h1 class="ingListHeader"><em>Ingredients</em>
+          <button type="button" class="btn btn-link btnBlueIcon" data-toggle="modal" data-target="#exampleModal">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="12" cy="12" r="9" />
+            <line x1="9" y1="12" x2="15" y2="12" />
+            <line x1="12" y1="9" x2="12" y2="15" />
+            </svg>
+          </button>
+        </h1>
         <% @cocktail.doses.each do |dose| %>
           <li class="list-group-item ingList"><%= dose.description %> <%= dose.ingredient.name %></li>
         <% end %>
-      </ul>
+    </ul>
    <!--    <%= link_to 'Back', cocktails_path, class: "btn btn-link" %> -->
 
-    <div class="col-8 formLabels">
+   <!--  <div class="col-8 formLabels">
       <h1><em>Add Ingredients</em></h1>
         <%= simple_form_for [ @cocktail, @dose ] do |form| %>
                  <%= form.input :description%>
                  <%= form.association :ingredient, input_html: { class: 'select2' }%>
           <%= form.submit class: "btn btn-link btnBlueText"  %>
         <% end %>
-    </div>
+    </div> -->
 
   </div>
 </div>
