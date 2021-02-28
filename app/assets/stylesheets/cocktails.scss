@@ -1,3 +1,134 @@
 // Place all the styles related to the Cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+  background-color: #212121;
+  margin-top:50px;
+}
+
+.formLabels{
+  color: white;
+}
+
+.showBanner{
+  border-radius: 7px;
+}
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+}
+
+.btnBlueText{
+color:#167FFB;
+border: 1px solid #167FFB;
+}
+
+.btnBlueText:hover{
+  color:white;
+  background-color: #167FFB;
+  text-decoration: none;
+}
+
+.NewCocktailForm {
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+
+    h1{
+      padding: 20px 0;
+    }
+
+    span{
+      color:white;
+    }
+}
+
+  .max-lines {
+  display: block;/* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: scroll;
+  max-height: 3.6em;
+  line-height: 1.8em;
+}
+
+.ingListHeader{
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card{
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.mainContainer{
+  padding-right: 55px;
+  padding-left: 55px;
+  padding-top: 55px;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.bodyContainer{
+  width: 85vw;
+    padding-right: 55px;
+    padding-left: 70px;
+    margin: -35px auto 25px auto;
+}
+
+.ingList{
+  background-color: #313131 !important;
+  border: none !important;
+  color: white !important;
+  margin: 0 0 3px 0 !important;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.card-img-top{
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.cDescription{
+  color: white;
+}
+
+.trashy{
+      position: absolute;
+    right: 18px;
+    bottom: 20px;
+}
+
+#listy{
+  width: 20%;
+}
+
+#cocktail_description{
+  height: 50vh;
+}
