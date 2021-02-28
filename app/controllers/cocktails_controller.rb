@@ -5,7 +5,9 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
-
+  def search
+    @cocktails = Cocktail.where("description LIKE ?", "%" + params[:q] + "%")
+  end
 
   def show
     @dose = Dose.new
